@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6y1-Td-ert">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tweet List View Controller-->
+        <scene sceneID="dB0-sX-Kpq">
+            <objects>
+                <viewController id="6y1-Td-ert" customClass="TweetListViewController" customModule="TweetKouga" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cx5-kz-zTX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CpI-Q1-6Pe">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="TweetCell" id="Sm3-7u-gfp" customClass="TweetCell" customModule="TweetKouga" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sm3-7u-gfp" id="a4a-5Z-e0s">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PsN-ua-U5P">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PsN-ua-U5P" firstAttribute="top" secondItem="a4a-5Z-e0s" secondAttribute="top" id="b13-cs-eMG"/>
+                                                <constraint firstAttribute="bottom" secondItem="PsN-ua-U5P" secondAttribute="bottom" id="cIJ-Ag-09k"/>
+                                                <constraint firstAttribute="trailing" secondItem="PsN-ua-U5P" secondAttribute="trailing" id="sWk-QM-lqk"/>
+                                                <constraint firstItem="PsN-ua-U5P" firstAttribute="leading" secondItem="a4a-5Z-e0s" secondAttribute="leading" id="xb8-gX-twy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mainImageView" destination="PsN-ua-U5P" id="40o-6a-2Kp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CpI-Q1-6Pe" firstAttribute="leading" secondItem="Uin-zG-8QS" secondAttribute="leading" id="TXM-4U-uwy"/>
+                            <constraint firstItem="CpI-Q1-6Pe" firstAttribute="top" secondItem="Uin-zG-8QS" secondAttribute="top" id="hAZ-gi-EXH"/>
+                            <constraint firstItem="Uin-zG-8QS" firstAttribute="trailing" secondItem="CpI-Q1-6Pe" secondAttribute="trailing" id="k9T-6x-yGf"/>
+                            <constraint firstItem="Uin-zG-8QS" firstAttribute="bottom" secondItem="CpI-Q1-6Pe" secondAttribute="bottom" id="lEf-XZ-8tg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Uin-zG-8QS"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="CpI-Q1-6Pe" id="5uc-Tz-Qac"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A30-Od-BoI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-342" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
